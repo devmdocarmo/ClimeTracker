@@ -1,55 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.PrincipalFragment">
 
     <ImageView
-    android:id="@+id/image_climate"
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:src="@drawable/soleado"
-    android:visibility="invisible"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:contentDescription="@string/imageclimate"/>
+        android:id="@+id/image_climate"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/imageclimate"
+        android:src="@drawable/soleado"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/temperature_actual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/testGrade"
-        android:textSize="72sp"
-        android:textColor="@color/colorWhite"
-        android:layout_marginLeft="20sp"
         android:layout_marginStart="20sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="10dp"
+        android:text="@string/testGrade"
+        android:textColor="@color/colorWhite"
+        android:textSize="72sp"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/city"
-        android:textSize="18sp"
         android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@id/temperature_actual"
-        app:layout_constraintStart_toStartOf="@id/temperature_actual"/>
+        app:layout_constraintStart_toStartOf="@id/temperature_actual"
+        app:layout_constraintTop_toBottomOf="@id/temperature_actual" />
+
     <TextView
         android:id="@+id/country_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/country"
-        android:textSize="18sp"
-        android:textColor="@color/colorWhite"
-        android:layout_marginLeft="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/country"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
         android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@id/temperature_actual"
-        app:layout_constraintStart_toEndOf="@id/city_name"/>
+        app:layout_constraintStart_toEndOf="@id/city_name"
+        app:layout_constraintTop_toBottomOf="@id/temperature_actual" />
+
+    <ImageView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/sandwich"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

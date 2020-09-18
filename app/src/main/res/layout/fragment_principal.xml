@@ -11,13 +11,13 @@
     android:layout_width="match_parent"
     android:layout_height="250dp"
     android:src="@drawable/soleado"
-    android:layout_marginTop="5dp"
+    android:visibility="invisible"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     android:contentDescription="@string/imageclimate"/>
     <TextView
-        android:id="@+id/temperatureActual"
+        android:id="@+id/temperature_actual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/testGrade"
@@ -25,8 +25,31 @@
         android:textColor="@color/colorWhite"
         android:layout_marginLeft="20sp"
         android:layout_marginStart="20sp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/temperature_actual"
+        app:layout_constraintStart_toStartOf="@id/temperature_actual"/>
+    <TextView
+        android:id="@+id/country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/temperature_actual"
+        app:layout_constraintStart_toEndOf="@id/city_name"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

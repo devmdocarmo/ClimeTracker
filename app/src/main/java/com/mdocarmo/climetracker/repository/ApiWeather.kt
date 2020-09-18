@@ -16,7 +16,7 @@ interface ApiWeather {
 /*******************callback=test&id=2172797&units=%2522metric%2522%20or%20%2522imperial%2522&mode=xml%252C%20html&q=London%252Cuk*****************/
 /*******************callback : test, id : 123, units : "metric" or "imperial", mode : xml, html, q : London,Cuk*****************************/
     @GET("weather")
-    fun getCurrentData(@Query("callback") callback: String = "test", @Query("id")id: Int = 2172797, @Query("units")units: String = "metric", @Query("mode")mode: String = ""):Call<String>
+    fun getCurrentData(@Query("callback") callback: String = "", @Query("q")q: String, @Query("units")units: String = "metric", @Query("mode")mode: String = ""):Call<String>
     companion object {
         private const val url = "https://community-open-weather-map.p.rapidapi.com/"
          val instance: ApiWeather by lazy {

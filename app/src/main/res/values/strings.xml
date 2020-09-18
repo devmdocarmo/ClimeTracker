@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="testGrade">30°</string>
     <string name="imageclimate">imageClimate</string>
+    <string name="city">City,</string>
+    <string name="country">PY</string>
 </resources>
